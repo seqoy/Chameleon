@@ -96,6 +96,11 @@ typedef enum {
 - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration;
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation;
 
+// Faster one-part variant, called from within a rotating animation block, for additional animations during rotation.
+// A subclass may override this method, or the two-part variants below, but not both.
+// Does nothing.
+- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration;
+
 /**
  * The rotating header and footer views will slide out during the rotation and back in once it has completed.
  * Must be in the view hierarchy. Default returns nil.

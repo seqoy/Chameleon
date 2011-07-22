@@ -260,6 +260,12 @@
 {
 }
 
+- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation 
+                                         duration:(NSTimeInterval)duration
+{    
+}
+
+
 - (id)_nearestParentViewControllerThatIsKindOf:(Class)c
 {
     UIViewController *controller = _parentViewController;

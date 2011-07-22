@@ -96,6 +96,17 @@ typedef enum {
 - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration;
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation;
 
+/**
+ * The rotating header and footer views will slide out during the rotation and back in once it has completed.
+ * Must be in the view hierarchy. Default returns nil.
+ */
+- (UIView *)rotatingHeaderView;     
+
+/**
+ * The rotating header and footer views will slide out during the rotation and back in once it has completed.
+ * Must be in the view hierarchy. Default returns the active keyboard.
+ */
+- (UIView *)rotatingFooterView; 
 
 @property (nonatomic, readonly, copy) NSString *nibName;		// always returns nil
 @property (nonatomic, readonly, retain) NSBundle *nibBundle;	// always returns nil

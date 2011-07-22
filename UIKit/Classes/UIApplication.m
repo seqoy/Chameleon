@@ -520,6 +520,10 @@ static BOOL TouchIsActive(UITouch *touch)
     [[NSNotificationCenter defaultCenter] postNotificationName:UIApplicationDidBecomeActiveNotification object:self];
 }
 
+- (void)setStatusBarHidden:(BOOL)hidden withAnimation:(UIStatusBarAnimation)animation {
+    
+}
+
 @end
 
 

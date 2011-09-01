@@ -92,7 +92,7 @@ typedef enum {
  * Initializes and returns a table cell object. <b>(Deprecated in iOS 3.0. 
  * Use <tt>initWithStyle:reuseIdentifier:</tt> instead.)</b>
  */
-- (id)initWithFrame:(CGRect)frame reuseIdentifier:(NSString *)reuseIdentifier __OSX_AVAILABLE_BUT_DEPRECATED(__MAC_NA,__MAC_NA,__IPHONE_2_0,__IPHONE_3_0);;
+- (id)initWithFrame:(CGRect)frame reuseIdentifier:(NSString *)reuseIdentifier __attribute__ ((deprecated));
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated;
 - (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated;

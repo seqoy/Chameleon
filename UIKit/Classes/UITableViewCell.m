@@ -73,6 +73,13 @@ extern CGFloat _UITableViewDefaultRowHeight;
     return self;
 }
 
+- (id)initWithFrame:(CGRect)frame reuseIdentifier:(NSString *)reuseIdentifier {
+    if ((self=[self initWithFrame:frame])) {
+        _reuseIdentifier = [reuseIdentifier copy];
+    }
+    return self;
+}
+
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     if ((self=[self initWithFrame:CGRectMake(0,0,320,_UITableViewDefaultRowHeight)])) {
